@@ -41,7 +41,7 @@ export default function Work() {
   return (
     <div >
       <main>
-        <div className={styles.container}>
+        <div className={styles.workContainer}>
         <h1 className={styles.title}>
            work
         </h1>

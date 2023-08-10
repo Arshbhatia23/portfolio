@@ -22,11 +22,6 @@ export default function HomeScreen() {
   function getFooterComponent() {
     return (
       <div className={styles.footer}>
-        {/* <nav className={styles.nav_sections}>
-          <h3>About</h3>
-          <h3>Work</h3>
-          <h3>Contact</h3>
-        </nav> */}
         <h2>2023</h2>
       </div>
     )
@@ -40,29 +35,20 @@ export default function HomeScreen() {
         <link rel="icon" href="/portfolio_logo.ico" />
       </Head>
 
-      <main className={styles.mainContainer}>
+      
+      
         {/* SET Header as ABSOLUTE & Add Footer ALSO */}
         {getHeaderComponent()}
-         <div className={styles.mainContainer2}>
+        {getFooterComponent()}
+      
+      
+
+      <div className={styles.mainContainer2}>
         {LandingPage()}
-        {/* {About()} */}
-        {/* {Work()} */}
-        {/* {Contact()} */}
         {Work()}
         </div>
-        {getFooterComponent()}
-      </main>
 
-      {/* <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer> */}
+
 
       <style jsx>{`
         main {

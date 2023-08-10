@@ -1,6 +1,7 @@
-.container {
-    max-height: 80vh;
-    height: 80vh;
+.workContainer {
+    background-color: #F9F2ED;
+    min-height: 100vh;
+    min-width: 100vw;
     padding: 2%;
     display: flex;
     flex-direction: column;
@@ -11,7 +12,7 @@
   
   
   .mainContainer2 {
-    max-height: 100vh;
+    /* max-height: 100vh; */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -19,18 +20,7 @@
     overflow-y: scroll;
   }
   
-  .header {
-    display: flex;
-    width: 100vw;
-    height: 10vh;
-    flex-direction: row;
-    padding-right: 2%;
-    top: 0%;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: absolute;
-    background-color: transparent;
-  }
+
   
   .header2 {
     display: flex;
@@ -45,29 +35,6 @@
     background-color: transparent;
   }
   
-  .footer {
-    display: flex;
-    width: 100vw;
-    height: 10vh;
-    bottom: 0%;
-    right: 0%;
-    padding-inline: 2%;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: absolute;
-    background-color: transparent;
-  }
-  
-  .nav_sections {
-    display: flex;
-    width: 20vw;
-    margin-left: 2%;
-    height: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    /* position: absolute; */
-  }
   
   .title a {
     color: #0070f3;
