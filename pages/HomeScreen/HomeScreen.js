@@ -6,12 +6,7 @@ export default function HomeScreen() {
 
   function getHeader() {
     return(
-      <div style={{
-          display: 'flex',
-          width: '50%',
-          flexDirection: 'row',
-          justifyContent: 'space-between'
-        }}>
+      <div className={styles.header}>
         <h1>About</h1>
         <h1>Work</h1>
         <h1>Contact</h1>
