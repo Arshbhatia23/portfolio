@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from './HomeScreen.module.css';
-import MouseExample from '../MouseExample';
+// import MouseExample from '../MouseExample';
 
 export default function HomeScreen() {
 
@@ -19,7 +19,6 @@ export default function HomeScreen() {
     )
   }
 
-
   return (
     <div className={styles.container}>
       <Head>
@@ -29,7 +28,11 @@ export default function HomeScreen() {
 
       <main>
         {getHeader()}
-        {MouseExample()}
+        {/* {MouseExample()} */}
+        {/* {LandingPage()}
+        {About()}
+        {Work()}
+        {Contact()} */}
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
