@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from '../HomeScreen/HomeScreen.module.css';
-import { useNavigate } from "react-router-dom";
-import work from './dummy';
+// import { useNavigate } from "react-router-dom";
+// import work from './dummy';
 // import MouseExample from '../MouseExample';
 
 export default function Work() {

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from './HomeScreen.module.css';
 // import MouseExample from '../MouseExample';
 import LandingPage from '../1LandingPage/LandingPage';
+import Work from '../3Work/Work';
 
 export default function HomeScreen() {
 
@@ -87,9 +88,9 @@ export default function HomeScreen() {
         {getHeaderComponent()}
         {/* {MouseExample()} */}
         {LandingPage()}
-        {/* {About()}
-        {Work()}
-        {Contact()} */}
+        {/* {About()} */}
+        {/* {Work()} */}
+        {/* {Contact()} */}
 
         {getFooterComponent()}
         {/* {getDefaultTemplateForNextJS()} */}
