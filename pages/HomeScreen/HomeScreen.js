@@ -3,6 +3,7 @@ import styles from './HomeScreen.module.css';
 // import MouseExample from '../MouseExample';
 import LandingPage from '../1LandingPage/LandingPage';
 import Work from '../3Work/Work';
+import Contact from '../4Contact/Contact';
 import { useState, useEffect } from "react";
 import Link from 'next/link';
 
@@ -37,7 +38,9 @@ export default function HomeScreen() {
           <Link href={'/#page-work'} >
             <h3 onClick={() => scrollToSection("#page-work")}>WORK</h3>
           </Link>
-          <h3>CONTACT</h3>
+          <Link href={'/#page-contact'}>
+          <h3 onClick={() => scrollToSection("#page-contact")}>CONTACT</h3>
+          </Link>
         </nav>
         <h2 onClick={() => scrollToSection("#page-landing")}>DESIGN PORTFOLIO</h2>
       </div>
@@ -70,6 +73,9 @@ export default function HomeScreen() {
         </div>
         <div id='page-work' data-anchor='#page-work'>
           {Work()}
+        </div>
+        <div id='page-contact' data-anchor='#page-contact'>
+          {Contact()}
         </div>
       </div>
 
