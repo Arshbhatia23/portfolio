@@ -3,18 +3,43 @@ import styles from './HomeScreen.module.css';
 // import MouseExample from '../MouseExample';
 import LandingPage from '../1LandingPage/LandingPage';
 import Work from '../3Work/Work';
+import { useState, useEffect } from "react";
+import Link from 'next/link';
 
 export default function HomeScreen() {
+
+  function handleScroll() {
+    document.addEventListener('wheel', function (event) {
+      // Get the distance that the mouse wheel was rotated
+      const delta = event.deltaY;
+      console.log(event);
+      // Check the value of delta
+      if (delta > 0) {
+        scrollToSection("#page-landing");
+        // The wheel was rotated upwards or away from the user
+      } else if (delta < 0) {
+        scrollToSection("#page-work");
+        // The wheel was rotated downwards or towards the user
+      }
+    });
+  }
+
+  function scrollToSection(link) {
+    const anchor = document.querySelector(link);
+    anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
 
   function getHeaderComponent() {
     return (
       <div className={styles.header}>
         <nav className={styles.nav_sections}>
-          <h3>About</h3>
-          <h3>Work</h3>
-          <h3>Contact</h3>
+          <h3>ABOUT</h3>
+          <Link href={'/#page-work'} >
+            <h3 onClick={() => scrollToSection("#page-work")}>WORK</h3>
+          </Link>
+          <h3>CONTACT</h3>
         </nav>
-        <h2>DESIGN PORTFOLIO</h2>
+        <h2 onClick={() => scrollToSection("#page-landing")}>DESIGN PORTFOLIO</h2>
       </div>
     )
   }
@@ -29,24 +54,24 @@ export default function HomeScreen() {
 
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onScroll={handleScroll}>
       <Head>
         <title>Portfolio</title>
         <link rel="icon" href="/portfolio_logo.ico" />
       </Head>
 
-      
-      
-        {/* SET Header as ABSOLUTE & Add Footer ALSO */}
-        {getHeaderComponent()}
-        {getFooterComponent()}
-      
-      
+      {/* SET Header as ABSOLUTE & Add Footer ALSO */}
+      {getHeaderComponent()}
+      {getFooterComponent()}
 
       <div className={styles.mainContainer2}>
-        {LandingPage()}
-        {Work()}
+        <div id='page-landing' data-anchor='#page-landing'>
+          {LandingPage()}
         </div>
+        <div id='page-work' data-anchor='#page-work'>
+          {Work()}
+        </div>
+      </div>
 
 
 
