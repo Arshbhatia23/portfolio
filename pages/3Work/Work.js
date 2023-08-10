@@ -2,8 +2,8 @@ import Head from 'next/head';
 // import { useNavigate } from "react-router-dom";
 // import work from './dummy';
 import styles from './Work.module.css';
-import { useNavigate } from "react-router-dom";
-import work from './dummy';
+// import { useNavigate } from "react-router-dom";
+// import work from './dummy';
 // import MouseExample from '../MouseExample';
 
 export default function Work() {
@@ -39,7 +39,7 @@ export default function Work() {
       }
 
   return (
-    <div >
+    <div>
       <main>
         <div className={styles.workContainer}>
         <h1 className={styles.title}>

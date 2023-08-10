@@ -8,3 +8,19 @@
     justify-content: center;
     align-items: center;
 }
+
+.titleName {
+    display: flex;
+    height: 50%;
+    width: 60%;
+    align-items: flex-end;
+    margin-left: 30%;
+}
+
+.titleDesc {
+    display: flex;
+    height: 50%;
+    width: 40%;
+    margin-left: 50%;
+    align-items: flex-start;
+}
