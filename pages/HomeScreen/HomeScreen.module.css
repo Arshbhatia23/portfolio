@@ -30,6 +30,19 @@
   background-color: transparent;
 }
 
+.header2 {
+  display: flex;
+  width: 60vw;
+  height: 10vh;
+  flex-direction: row;
+  padding-right: 2%;
+  /* top: 0%; */
+  justify-content: space-between;
+  align-items: flex-start;
+  /* position: absolute; */
+  background-color: transparent;
+}
+
 .footer {
   display: flex;
   width: 100vw;

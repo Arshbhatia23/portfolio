@@ -32,7 +32,7 @@ export default function Work() {
           <h2 onClick={()=>{console.log("")}}>{number.projectName}</h2>
         );
         return (
-          <div className={styles.header}>{listItems}</div>
+          <div className={styles.header2}>{listItems}</div>
         );
       }
 
