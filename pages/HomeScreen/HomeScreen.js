@@ -1,33 +1,39 @@
 import Head from 'next/head';
 import styles from './HomeScreen.module.css';
 // import MouseExample from '../MouseExample';
+import LandingPage from '../1LandingPage/LandingPage';
 
 export default function HomeScreen() {
 
-  function getHeader() {
-    return(
+  function getHeaderComponent() {
+    return (
       <div className={styles.header}>
-        <h1>About</h1>
-        <h1>Work</h1>
-        <h1>Contact</h1>
+        <nav className={styles.nav_sections}>
+          <h3>About</h3>
+          <h3>Work</h3>
+          <h3>Contact</h3>
+        </nav>
+        <h2>DESIGN PORTFOLIO</h2>
       </div>
     )
   }
 
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+  function getFooterComponent() {
+    return (
+      <div className={styles.footer}>
+        {/* <nav className={styles.nav_sections}>
+          <h3>About</h3>
+          <h3>Work</h3>
+          <h3>Contact</h3>
+        </nav> */}
+        <h2>2023</h2>
+      </div>
+    )
+  }
 
-      <main>
-        {getHeader()}
-        {/* {MouseExample()} */}
-        {/* {LandingPage()}
-        {About()}
-        {Work()}
-        {Contact()} */}
+  function getDefaultTemplateForNextJS() {
+    return (
+      <div>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -65,9 +71,31 @@ export default function HomeScreen() {
             </p>
           </a>
         </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className={styles.container}>
+      <Head>
+        <title>Portfolio</title>
+        <link rel="icon" href="/portfolio_logo.ico" />
+      </Head>
+
+      <main className={styles.mainContainer}>
+        {/* SET Header as ABSOLUTE & Add Footer ALSO */}
+        {getHeaderComponent()}
+        {/* {MouseExample()} */}
+        {LandingPage()}
+        {/* {About()}
+        {Work()}
+        {Contact()} */}
+
+        {getFooterComponent()}
+        {/* {getDefaultTemplateForNextJS()} */}
       </main>
 
-      <footer>
+      {/* <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
@@ -76,7 +104,7 @@ export default function HomeScreen() {
           Powered by{' '}
           <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
-      </footer>
+      </footer> */}
 
       <style jsx>{`
         main {
