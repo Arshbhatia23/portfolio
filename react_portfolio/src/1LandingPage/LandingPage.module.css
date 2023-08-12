@@ -1,0 +1,26 @@
+.landing_page_container {
+    background-color: #F9F2ED;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleName {
+    display: flex;
+    height: 50%;
+    width: 60%;
+    align-items: flex-end;
+    margin-left: 30%;
+}
+
+.titleDesc {
+    display: flex;
+    height: 50%;
+    width: 40%;
+    margin-left: 50%;
+    align-items: flex-start;
+}
