@@ -70,16 +70,16 @@ export default function HomeScreen() {
 
       <div className={styles.mainContainer2}>
         <div id='page-landing' data-anchor='#page-landing'>
-          {LandingPage()}
+          <LandingPage/>
         </div>
         <div id='page-about' data-anchor='#page-about'>
-          {About()}
+          <About/>
         </div>
         <div id='page-work' data-anchor='#page-work'>
-          {Work()}
+          <Work/>
         </div>
         <div id='page-contact' data-anchor='#page-contact'>
-          {Contact()}
+          <Contact/>
         </div>
       </div>
 

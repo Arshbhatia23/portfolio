@@ -1,20 +1,21 @@
 import styles from './Work.module.css';
+import Project from './Project';
 
 export default function Work() {
   const work = [{
-    projectId: 1,
+    projectId: 'dineIn',
     projectName: 'DineInApp',
     projectDescr: "loiutrwvbsxnb"
   }, {
-    projectId: 2,
+    projectId: 'cafe',
     projectName: 'CafeApp',
     projectDescr: "loiutrwvbsxnb"
   }, {
-    projectId: 3,
+    projectId: 'knock',
     projectName: 'KnockApp',
     projectDescr: "loiutrwvbsxnb"
   }, {
-    projectId: 4,
+    projectId: 'app',
     projectName: 'KnockApp',
     projectDescr: "loiutrwvbsxnb"
   }];
@@ -25,11 +26,15 @@ export default function Work() {
   //   navigate(path);
   // }
 
+
+  function scrollToSection(link) {
+    const anchor = document.querySelector(link);
+    anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
   function NumberList() {
-    console.log('work');
-    console.log(work);
     const listItems = work.map((number) =>
-      <h2 key={number.projectId} onClick={() => { console.log("") }}>{number.projectName}</h2>
+      <h2 key={number.projectId} onClick={() => scrollToSection(`#${number.projectId}`)}>{number.projectName}</h2>
     );
     return (
       <div className={styles.header2}>{listItems}</div>
@@ -46,6 +51,13 @@ export default function Work() {
           <NumberList />
         </div>
       </main>
+      <ul>
+        {work.map((workDetail) => 
+        <div  id={workDetail.projectId} data-anchor={workDetail.projectId}>
+        <Project workDetail={workDetail}/>
+        </div>)
+        }
+      </ul>
     </div>
   )
 }
