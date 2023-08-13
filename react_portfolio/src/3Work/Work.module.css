@@ -1,5 +1,5 @@
 .workContainer {
-    background-color: #F9F2ED;
+    background-color: #bdb9b5;
     min-height: 100vh;
     min-width: 100vw;
     padding: 2%;
@@ -9,7 +9,10 @@
     align-items: center;
   }
   
-  
+  .listStyle {
+    margin: 0;
+    padding: 0
+  }
   
   .mainContainer2 {
     /* max-height: 100vh; */

@@ -59,11 +59,6 @@ export default function HomeScreen() {
     <div className={styles.container} 
       // onScroll={handleScroll}
     >
-      {/* <Head>
-        <title>Portfolio</title>
-        <link rel="icon" href="/portfolio_logo.ico" />
-      </Head> */}
-
       {/* SET Header as ABSOLUTE & Add Footer ALSO */}
       {getHeaderComponent()}
       {getFooterComponent()}
@@ -83,11 +78,8 @@ export default function HomeScreen() {
         </div>
       </div>
 
-
-
       <style jsx>{`
         main {
-          padding: 5rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;

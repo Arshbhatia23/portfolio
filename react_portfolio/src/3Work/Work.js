@@ -15,8 +15,8 @@ export default function Work() {
     projectName: 'KnockApp',
     projectDescr: "loiutrwvbsxnb"
   }, {
-    projectId: 'app',
-    projectName: 'KnockApp',
+    projectId: 'portfolio',
+    projectName: 'Portfolio',
     projectDescr: "loiutrwvbsxnb"
   }];
 
@@ -51,11 +51,11 @@ export default function Work() {
           <NumberList />
         </div>
       </main>
-      <ul>
-        {work.map((workDetail) => 
-        <div  id={workDetail.projectId} data-anchor={workDetail.projectId}>
-        <Project workDetail={workDetail}/>
-        </div>)
+      <ul className={styles.listStyle}>
+        {work.map((workDetail) =>
+          <div id={workDetail.projectId} data-anchor={workDetail.projectId}>
+            <Project workDetail={workDetail} />
+          </div>)
         }
       </ul>
     </div>
