@@ -1,4 +1,5 @@
 import styles from './LandingPage.module.css';
+import data from './../data.json';
 
 export default function LandingPage() {
   return (
@@ -6,14 +7,13 @@ export default function LandingPage() {
       <main>
         <div className={styles.landing_page_container}> 
         <div className={styles.titleName}>
-        <h1>Developer <br /> Name</h1>
+        <h1>{data.firstName} <br />{data.lastName}</h1>
       </div>
       <div className={styles.titleDesc}>
-        <h4>Front end software developement in India, <br /> 
-        with a particular passion for design,<br /> 
-        creativity and communication.</h4>
+        <h4>{data.home_desc_1} <br /> 
+        {data.home_desc_2}<br /> 
+        {data.home_desc_3}</h4>
       </div>
-      {/* <h1>LANDING PAGE</h1> */}
          </div>
       </main>
     </div>

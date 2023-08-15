@@ -1,6 +1,9 @@
 {
-    "name": "FirstName LastName",
-    "home_desc": "Front end software developement in India, with a particular passion for design, creativity and communication.",
+    "firstName": "FirstName",
+    "lastName" : "Lastname",
+    "home_desc_1": "Front end software developement in India,",
+    "home_desc_2": " with a particular passion for design,",
+    "home_desc_3": " creativity and communication.",
     "about_desc": "Development and design can feed and learn one from each other in any project. Hybrid professionals that understand and can communicate with both ends have the key to a better work flow in every environment.",
     "about_summary": "I believe more can be achieved when both ends meet, and I have a passion for being right where they do so.",
     "tech_stack": [
