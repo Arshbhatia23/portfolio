@@ -31,15 +31,9 @@ export default function HomeScreen() {
     return (
       <div className={styles.header}>
         <nav className={styles.nav_sections}>
-          {/* <Link href={'/#page-about'} > */}
-            <h3 onClick={() => scrollToSection("#page-about")}>ABOUT</h3>
-          {/* </Link> */}
-          {/* <Link href={'/#page-work'} > */}
-            <h3 onClick={() => scrollToSection("#page-work")}>WORK</h3>
-          {/* </Link> */}
-          {/* <Link href={'/#page-contact'}> */}
+          <h3 onClick={() => scrollToSection("#page-about")}>ABOUT</h3>
+          <h3 onClick={() => scrollToSection("#page-work")}>WORK</h3>
           <h3 onClick={() => scrollToSection("#page-contact")}>CONTACT</h3>
-          {/* </Link> */}
         </nav>
         <h2 onClick={() => scrollToSection("#page-landing")}>DESIGN PORTFOLIO</h2>
       </div>
