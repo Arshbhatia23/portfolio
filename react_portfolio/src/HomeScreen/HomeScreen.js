@@ -6,22 +6,6 @@ import About from '../2About/About';
 
 export default function HomeScreen() {
 
-  // function handleScroll() {
-  //   document.addEventListener('wheel', function (event) {
-  //     // Get the distance that the mouse wheel was rotated
-  //     const delta = event.deltaY;
-  //     console.log(event);
-  //     // Check the value of delta
-  //     if (delta > 0) {
-  //       scrollToSection("#page-landing");
-  //       // The wheel was rotated upwards or away from the user
-  //     } else if (delta < 0) {
-  //       scrollToSection("#page-work");
-  //       // The wheel was rotated downwards or towards the user
-  //     }
-  //   });
-  // }
-
   function scrollToSection(link) {
     const anchor = document.querySelector(link);
     anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -35,7 +19,7 @@ export default function HomeScreen() {
           <h3 onClick={() => scrollToSection("#page-work")}>WORK</h3>
           <h3 onClick={() => scrollToSection("#page-contact")}>CONTACT</h3>
         </nav>
-        <h2 onClick={() => scrollToSection("#page-landing")}>DESIGN PORTFOLIO</h2>
+        <p onClick={() => scrollToSection("#page-landing")}>DESIGN PORTFOLIO</p>
       </div>
     )
   }

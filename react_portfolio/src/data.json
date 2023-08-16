@@ -1,6 +1,6 @@
 {
-    "firstName": "FirstName",
-    "lastName" : "Lastname",
+    "firstName": "Shubhi",
+    "lastName" : "         Gupta",
     "home_desc_1": "Front end software developement in India,",
     "home_desc_2": " with a particular passion for design,",
     "home_desc_3": " creativity and communication.",
@@ -35,8 +35,8 @@
         }
     ],
     "contact": {
-        "mail": "mail Link",
-        "linkedIn": "linkedIn Link",
-        "github": "github Link"
+        "mail": "mailto:shubhiguptahtc@gmail.com",
+        "linkedIn": "www.linkedin.com/in/shubhi-gupta-06b789191",
+        "github": "https://github.com/ShubhiGupta99"
     }
 }

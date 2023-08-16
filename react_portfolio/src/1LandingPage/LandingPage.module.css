@@ -5,8 +5,14 @@
     padding: 2%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    border-width: 1em;
+   
+}
+
+.container2{
+    width:70%
 }
 
 .titleName {
@@ -14,13 +20,23 @@
     height: 50%;
     width: 60%;
     align-items: flex-end;
-    margin-left: 30%;
+    border-width:1px;
+    /* background-color: blue; */
+    margin-top: 8%;
+    /* margin-left: 20%; */
 }
 
 .titleDesc {
     display: flex;
     height: 50%;
     width: 40%;
-    margin-left: 50%;
+    margin-left: 15%;
     align-items: flex-start;
+    /* background-color: red; */
+}
+
+.name{
+    font-size: 10vh;
+    line-height: 1;
+    font-weight: 800;
 }

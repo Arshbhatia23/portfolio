@@ -5,6 +5,7 @@ export default function Project({workDetail}){
         <div className={styles.workContainer}>
             <main>
             <h1>{workDetail.projectName}</h1>
+            <p className={styles.description}>{workDetail.projectDesc}</p>
             </main>
         </div>
     )
