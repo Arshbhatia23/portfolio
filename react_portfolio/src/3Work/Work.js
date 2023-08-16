@@ -31,7 +31,7 @@ export default function Work() {
       </main>
       <ul className={styles.listStyle}>
         {data.work.map((workDetail) =>
-          <div id={workDetail.projectId} data-anchor={workDetail.projectId}>
+          <div id={workDetail.projectId} key={workDetail.projectId} data-anchor={workDetail.projectId}>
             <Project workDetail={workDetail} />
           </div>)
         }

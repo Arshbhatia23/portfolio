@@ -50,24 +50,22 @@ export default function HomeScreen() {
 
 
   return (
-    <div className={styles.container} 
-      // onScroll={handleScroll}
+    <div className={styles.container}
     >
-      {/* SET Header as ABSOLUTE & Add Footer ALSO */}
       {getHeaderComponent()}
       {getFooterComponent()}
 
       <div className={styles.mainContainer2}>
-        <div id='page-landing' data-anchor='#page-landing'>
+        <div className={styles.item} id='page-landing' data-anchor='#page-landing'>
           <LandingPage/>
         </div>
-        <div id='page-about' data-anchor='#page-about'>
+        <div className={styles.item} id='page-about' data-anchor='#page-about'>
           <About/>
         </div>
-        <div id='page-work' data-anchor='#page-work'>
+        <div className={[styles.item]} id='page-work' data-anchor='#page-work'>
           <Work/>
         </div>
-        <div id='page-contact' data-anchor='#page-contact'>
+        <div className={styles.item} id='page-contact' data-anchor='#page-contact'>
           <Contact/>
         </div>
       </div>
