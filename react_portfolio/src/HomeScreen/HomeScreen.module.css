@@ -1,3 +1,8 @@
+body {
+  background-color: #F9F2ED;
+  overflow: hidden;
+}
+
 .container {
   height: 100vh;
   width: 100vw;
@@ -13,17 +18,6 @@
   width: 100vw;
   overflow-y: scroll;
   overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-}
-
-.item {
-  height: 100vh;
-  scroll-snap-align: start;
-}
-
-.work {
-  height: 500vh;
-  scroll-snap-align: start;
 }
 
 .header {
