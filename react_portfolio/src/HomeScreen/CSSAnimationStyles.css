@@ -1,29 +1,27 @@
 body {
     width: 100vw;
-    height: 500vh;
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
     padding: 0;
     margin: 0;
-    background-color: #05f;
-    background: linear-gradient(180deg, #40f, #05f);
-}
-
-.wrapper {
-    width: 150px;
-    height: 150px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    /* background-color: #05f; */
+    /* background: linear-gradient(180deg, #40f, #05f); */
 }
 
 .view {
     width: 100vw;
     height: 100vh;
     position: absolute;
-    /* top: 50%;
-    left: 50%; */
+}
+
+.wrapper {
+    width: 100%;
+    height: 150%;
+    position: fixed;
+    top: -75%;
+    left: 50%;
+    /* transition: all .4s ease-in-out; */
     /* transform: translateX(-50%) translateY(-50%); */
 }
 
@@ -31,8 +29,32 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.2);
+    /* background-color: rgba(237, 13, 13, 0.782); */
+    background-color: #DBE2EF;
+    /* border-color: #222831;
+    border-width: 10; */
     border-radius: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    transform-origin: 225% 40%;
+}
+
+.wrapper2 {
+    width: 50%;
+    height: 400px;
+    position: fixed;
+    top: 75%;
+    right: 60%;
+    /* transform: translateX(-50%) translateY(-50%); */
+}
+
+.container2 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* background-color: rgba(237, 13, 13, 0.782); */
+    background-color: #222831;
+    border-radius: 100%;
+    transform-origin: -100% 40%;
 }
 
 .item {
