@@ -4,6 +4,7 @@ import LandingPage from '../1LandingPage/LandingPage';
 import Work from '../3Work/Work';
 import Contact from '../4Contact/Contact';
 import About from '../2About/About';
+import './HomeScreen.module.css';
 
 export default function HomeScreen() {
 
@@ -33,26 +34,34 @@ export default function HomeScreen() {
     )
   }
 
+  function getDynamicAnimationCSS() {
+    return (
+      <div className={styles.dynamicAnimationComponentContainer}>
+        <div className={styles.circle1}></div>
+        <div className={styles.circle2}></div>
+        <div className={styles.circle3}></div>
+        <div className={styles.circle4}></div>
+      </div>
+    )
+  }
 
   return (
-    <div className={styles.container}
-    >
+    <div className={styles.mainContainer2}>
+      {/* {getDynamicAnimationCSS()} */}
       {getHeaderComponent()}
       {getFooterComponent()}
-
-      <div className={styles.mainContainer2}>
-        <div className={styles.item} id='page-landing' data-anchor='#page-landing'>
-          <LandingPage/>
-        </div>
-        <div className={styles.item} id='page-about' data-anchor='#page-about'>
-          <About/>
-        </div>
-        <div className={[styles.item]} id='page-work' data-anchor='#page-work'>
-          <Work/>
-        </div>
-        <div className={styles.item} id='page-contact' data-anchor='#page-contact'>
-          <Contact/>
-        </div>
+      {/* <CSSAnimation scrollYProgress={scrollYProgress} scale={scale} /> */}
+      <div className={styles.item} id='page-landing' data-anchor='#page-landing'>
+        <LandingPage />
+      </div>
+      <div className={styles.item} id='page-about' data-anchor='#page-about'>
+        <About />
+      </div>
+      <div className={[styles.item]} id='page-work' data-anchor='#page-work'>
+        <Work />
+      </div>
+      <div className={styles.item} id='page-contact' data-anchor='#page-contact'>
+        <Contact />
       </div>
 
       <style jsx>{`

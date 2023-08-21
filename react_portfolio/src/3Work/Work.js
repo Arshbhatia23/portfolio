@@ -21,7 +21,7 @@ export default function Work() {
   }
 
   return (
-    <div data-anchor="page-work">
+    <div>
       <main>
         <div className={styles.workContainer}>
           <h1 className={styles.title}>

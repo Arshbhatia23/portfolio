@@ -1,6 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 
 // function App() {
 //   return (
@@ -24,12 +23,10 @@ import './App.css';
 // }
 // export default App;
 
-import HomeScreen from './HomeScreen/HomeScreen';
+import { CSSAnimation } from './HomeScreen/CSSAnimation';
 export default function App() {
 
   return (
-    <div className="App">
-      {HomeScreen()}
-    </div>
+    <CSSAnimation />
   )
 }
