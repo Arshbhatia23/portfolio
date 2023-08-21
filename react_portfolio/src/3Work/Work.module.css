@@ -31,6 +31,7 @@
     justify-content: center;
     align-items: center;
   }
+
   
   .listStyle {
     margin: 0;
@@ -144,7 +145,9 @@
   }
 
   .img1{
-    height:5em
+    height:50%;
+    width: 50%;
+    transform: rotate(-15deg);
   }
   
   @media (max-width: 600px) {
