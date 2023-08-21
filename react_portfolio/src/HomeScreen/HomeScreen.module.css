@@ -33,7 +33,7 @@ body {
   top: 0%;
   justify-content: space-between;
   align-items: flex-start;
-  position: absolute;
+  position: fixed;
   background-color: transparent;
 }
 
@@ -58,7 +58,7 @@ body {
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
-  position: absolute;
+  position: fixed;
   background-color: transparent;
 }
 
