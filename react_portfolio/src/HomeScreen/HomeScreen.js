@@ -10,7 +10,7 @@ export default function HomeScreen() {
 
   function scrollToSection(link) {
     const anchor = document.querySelector(link);
-    anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   function getHeaderComponent() {
@@ -57,7 +57,7 @@ export default function HomeScreen() {
       <div className={styles.item} id='page-about' data-anchor='#page-about'>
         <About />
       </div>
-      <div className={[styles.item]} id='page-work' data-anchor='#page-work'>
+      <div className={styles.item} id='page-work' data-anchor='#page-work'>
         <Work />
       </div>
       <div className={styles.item} id='page-contact' data-anchor='#page-contact'>
