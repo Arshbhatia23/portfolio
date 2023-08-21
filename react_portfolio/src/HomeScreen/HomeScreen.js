@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './HomeScreen.module.css';
 import LandingPage from '../1LandingPage/LandingPage';
 import Work from '../3Work/Work';
