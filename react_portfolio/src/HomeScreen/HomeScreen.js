@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import styles from './HomeScreen.module.css';
 import LandingPage from '../1LandingPage/LandingPage';
 import Work from '../3Work/Work';
 import Contact from '../4Contact/Contact';
 import About from '../2About/About';
 import './HomeScreen.module.css';
+import { useWindowSize } from "../hook-use-window-size";
+import "./styles.css";
+import { motion, useTransform, useElementScroll } from "framer-motion";
+import { Box, ContentBox } from "./Box";
+import data from './../data.json';
+import Project from '../3Work/Project';
 
 export default function HomeScreen() {
 
@@ -45,13 +51,129 @@ export default function HomeScreen() {
     )
   }
 
+  // const LINE_VARIANTS = {
+  //   visible: { height: "75vh", transition: { duration: 2 } },
+  //   hidden: { height: "0vh" }
+  // };
+
+  const SnapParent = React.forwardRef(({ ...props }, ref) => (
+    <div ref={ref} {...props} className="snap-parent-y-mandatory">
+      {props.children}
+    </div>
+  ));
+
+  const Container = ({ children }) => {
+    // const windowSize = useWindowSize();
+    const ref = useRef();
+    // const { scrollY, scrollYProgress } = useElementScroll(ref);
+
+    // const pageRange = [0, 0.15, 0.3, 0.5, 0.7, 1];
+    // const lengthRange = ["75vh", "45vh", "50vh", "45vh", "50vh", "100vh"];
+    // const calcHeight = useTransform(scrollYProgress, pageRange, lengthRange);
+
+    // const [scrollYValue, setScrollYValue] = useState(0);
+    // const [scrollYProgressValue, setScrollYProgressValue] = useState(0);
+
+    // const refreshPage = () => {
+    //   window.location.reload();
+    // };
+
+    // useEffect(() => {
+    //   console.log("scrollY");
+    //   console.log(scrollY);
+    //   scrollY.onChange((v) => setScrollYValue(v));
+    //   scrollYProgress.onChange((v) => setScrollYProgressValue(v));
+    // }, [scrollY, scrollYProgress]);
+
+    return (
+      <div
+        style={{
+          position: "relative"
+        }}
+      >
+        {/* <div
+          style={{
+            position: "fixed",
+            top: 0,
+            fontFamily: "monospace",
+            fontWeight: 600,
+            zIndex: 50
+          }}
+        >
+          {"height: " +
+            calcHeight.get() +
+            " | y: " +
+            scrollYValue +
+            " | percentage: " +
+            (scrollYProgressValue * 100).toFixed(0) +
+            "% | WindowSize h: " +
+            windowSize.height +
+            " w: " +
+            windowSize.width +
+            "   "}
+          <button onClick={refreshPage}>refresh</button>
+        </div> */}
+        {/* <div
+          style={{
+            position: "absolute",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100%",
+            zIndex: 20,
+            pointerEvents: "none"
+          }}
+        >
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={LINE_VARIANTS}
+            style={{ backgroundColor: "black", width: 3, height: calcHeight }}
+          />
+        </div> */}
+        <SnapParent
+          ref={ref}
+          style={{
+            position: "absolute"
+          }}
+        >
+          {children}
+        </SnapParent>
+      </div>
+    );
+  };
+
   return (
     <div className={styles.mainContainer2}>
       {/* {getDynamicAnimationCSS()} */}
       {getHeaderComponent()}
       {getFooterComponent()}
       {/* <CSSAnimation scrollYProgress={scrollYProgress} scale={scale} /> */}
-      <div className={styles.item} id='page-landing' data-anchor='#page-landing'>
+
+
+      <Container>
+        <Box full triggerOnce transLeft>
+          <LandingPage />
+        </Box>
+        <Box full triggerOnce transLeft>
+          <About />
+        </Box>
+        <Box full triggerOnce transLeft>
+          <Work />
+        </Box>
+        <div className={styles.listStyle}>
+          {data.work.map((workDetail) =>
+            <Box full triggerOnce transLeft id={workDetail.projectId} key={workDetail.projectId} data-anchor={workDetail.projectId}>
+              <Project workDetail={workDetail} />
+            </Box>)
+          }
+        </div>
+        <Box full triggerOnce transLeft>
+          <Contact />
+        </Box>
+      </Container>
+
+      {/* <div className={styles.item} id='page-landing' data-anchor='#page-landing'>
         <LandingPage />
       </div>
       <div className={styles.item} id='page-about' data-anchor='#page-about'>
@@ -62,7 +184,7 @@ export default function HomeScreen() {
       </div>
       <div className={styles.item} id='page-contact' data-anchor='#page-contact'>
         <Contact />
-      </div>
+      </div> */}
 
       <style jsx>{`
         main {

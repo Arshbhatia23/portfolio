@@ -1,6 +1,6 @@
 body {
-  /* background-color: #F9F2ED; */
-  background-color: #303030;
+  background-color: #F9F2ED;
+  /* background-color: #303030; */
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -19,7 +19,7 @@ body {
 
 .mainContainer2 {
   width: 100vw;
-  /* height: 100vh; */
+  height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -224,4 +224,9 @@ body {
     background-color: #ffe793;
     transform: translate(-50%, -50%);
   }
+}
+  
+.listStyle {
+  margin: 0;
+  padding: 0
 }

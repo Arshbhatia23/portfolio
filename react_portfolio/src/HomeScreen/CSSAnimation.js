@@ -5,7 +5,7 @@ import HomeScreen from "./HomeScreen";
 
 export const CSSAnimation = () => {
     const { scrollYProgress } = useScroll();
-    const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
+    const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
     return (
         <div>
             <div className="view">
@@ -13,7 +13,8 @@ export const CSSAnimation = () => {
                     <motion.div
                         className="container"
                         style={{
-                            scale
+                            scale,
+                            // translateX: '-50%',
                         }}
                     />
                 </div>
