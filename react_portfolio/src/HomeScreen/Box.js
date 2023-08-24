@@ -85,6 +85,8 @@ export const Box = ({
   transLeft = false,
   transScale = false,
   triggerOnce = false,
+  id = id,
+  dataAnchor,
   children
 }) => {
   const { ref, inView, entry } = useInView({
@@ -96,6 +98,8 @@ export const Box = ({
     <div
       className="snap-child-center"
       ref={ref}
+      id={id}
+      data-anchor={dataAnchor}
       style={{
         marginTop: 2,
         marginBottom: 2,

@@ -8,8 +8,8 @@ export const CSSAnimation = () => {
     const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
     return (
         <div>
-            <div className="view">
-                <div className="wrapper">
+            {/* <div className="view"> */}
+                {/* <div className="wrapper">
                     <motion.div
                         className="container"
                         style={{
@@ -25,8 +25,8 @@ export const CSSAnimation = () => {
                             scale
                         }}
                     />
-                </div>
-            </div>
+                </div> */}
+            {/* </div> */}
             <HomeScreen />
         </div>
     );

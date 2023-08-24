@@ -146,19 +146,22 @@ export default function HomeScreen() {
   return (
     <div className={styles.mainContainer2}>
       {/* {getDynamicAnimationCSS()} */}
-      {getHeaderComponent()}
-      {getFooterComponent()}
+      {/* {getHeaderComponent()} */}
+      {/* {getFooterComponent()} */}
       {/* <CSSAnimation scrollYProgress={scrollYProgress} scale={scale} /> */}
 
-
       <Container>
-        <Box full triggerOnce transLeft>
+        <div style={{ position: 'absolute', zIndex: 41 }}>
+          {getHeaderComponent()}
+          {getFooterComponent()}
+        </div>
+        <Box full triggerOnce transLeft id='page-landing' dataAnchor='#page-landing'>
           <LandingPage />
         </Box>
-        <Box full triggerOnce transLeft>
+        <Box full triggerOnce transLeft id='page-about' dataAnchor='#page-about'>
           <About />
         </Box>
-        <Box full triggerOnce transLeft>
+        <Box full triggerOnce transLeft id='page-work' dataAnchor='#page-work'>
           <Work />
         </Box>
         <div className={styles.listStyle}>
@@ -168,7 +171,7 @@ export default function HomeScreen() {
             </Box>)
           }
         </div>
-        <Box full triggerOnce transLeft>
+        <Box full triggerOnce transLeft id='page-contact' dataAnchor='#page-contact'>
           <Contact />
         </Box>
       </Container>
