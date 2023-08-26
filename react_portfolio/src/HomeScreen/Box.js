@@ -73,17 +73,17 @@ export const Box = ({
       <motion.div
         style={{
           backgroundColor: "white",
-          zIndex: 40
+          zIndex: -1
         }}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        variants={
-          transLeft
-            ? CHILD_VARIANTS_LEFT
-            : transScale
-              ? CHILD_VARIANTS_SCALE
-              : CHILD_VARIANTS_SCALE
-        }
+        // variants={
+        //   transLeft
+        //     ? CHILD_VARIANTS_LEFT
+        //     : transScale
+        //       ? CHILD_VARIANTS_SCALE
+        //       : CHILD_VARIANTS_SCALE
+        // }
       >
         {children}
       </motion.div>

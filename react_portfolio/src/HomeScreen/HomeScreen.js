@@ -155,23 +155,23 @@ export default function HomeScreen() {
           {getHeaderComponent()}
           {getFooterComponent()}
         </div>
-        <Box full triggerOnce transLeft id='page-landing' dataAnchor='#page-landing'>
+        <Box full transLeft id='page-landing' dataAnchor='#page-landing'>
           <LandingPage />
         </Box>
-        <Box full triggerOnce transLeft id='page-about' dataAnchor='#page-about'>
+        <Box full transLeft id='page-about' dataAnchor='#page-about'>
           <About />
         </Box>
-        <Box full triggerOnce transLeft id='page-work' dataAnchor='#page-work'>
+        <Box full transLeft id='page-work' dataAnchor='#page-work'>
           <Work />
         </Box>
         <div className={styles.listStyle}>
           {data.work.map((workDetail) =>
-            <Box full triggerOnce transLeft id={workDetail.projectId} key={workDetail.projectId} data-anchor={workDetail.projectId}>
+            <Box full transLeft id={workDetail.projectId} key={workDetail.projectId} data-anchor={workDetail.projectId}>
               <Project workDetail={workDetail} />
             </Box>)
           }
         </div>
-        <Box full triggerOnce transLeft id='page-contact' dataAnchor='#page-contact'>
+        <Box full transLeft id='page-contact' dataAnchor='#page-contact'>
           <Contact />
         </Box>
       </Container>
