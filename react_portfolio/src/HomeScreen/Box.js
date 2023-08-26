@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./styles.css";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import Constants from "../Constants.json";
 
 const CHILD_VARIANTS_SCALE = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
@@ -33,7 +34,21 @@ export const Box = ({
 
   useEffect(()=>{
     {console.log(`Id viewport ${id}`)}
-    {console.log(`Header inside viewport ${inView}`)}
+    {console.log(`Header inside viewport ${inView}`)};
+    if(inView){
+      if(id===Constants.about){
+
+      }else if(id===Constants.landing){
+        
+      }else if(id===Constants.about){
+        
+      }else if(id===Constants.work){
+        
+      }else if(id===Constants.contact){
+        
+      }
+    }
+   
   },[id,inView]);
 
  
