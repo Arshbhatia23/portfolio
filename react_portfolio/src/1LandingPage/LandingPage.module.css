@@ -1,5 +1,5 @@
 .landing_page_container {
-    background-color: #ffffff;
+    background-color: #F8F0E5;
     min-height: 100vh;
     height: 100vh;
     min-width: 100vw;
@@ -9,6 +9,7 @@
     /* justify-content: center; */
     align-items: center;
     border-width: 1em;
+    color:'white'
    
 }
 
@@ -22,6 +23,7 @@
     width: 60%;
     align-items: flex-end;
     border-width:1px;
+    color:'#fffff';
     /* background-color: blue; */
     margin-top: 8%;
     /* margin-left: 20%; */
@@ -33,6 +35,8 @@
     width: 40%;
     margin-left: 15%;
     align-items: flex-start;
+    /* text-decoration-color: #2F2FA2; */
+    color:'red';
     /* background-color: red; */
 }
 
