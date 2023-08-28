@@ -5,7 +5,7 @@ export default function LandingPage() {
   return (
     <div className={styles.landing_page_container}>
       <div className={styles.titleName}>
-        {/* <h1 className={styles.name}>{data.firstName} {data.lastName}</h1> */}
+        <h1 className={styles.name}>{data.firstName} {data.lastName}</h1>
       </div>
       <div className={styles.titleDesc}>
         <h4>{data.home_desc_1} <br />

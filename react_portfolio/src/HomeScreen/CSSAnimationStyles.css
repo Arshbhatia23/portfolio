@@ -26,18 +26,16 @@ body {
 }
 
 .container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    /* position: fixed; */
+    /* top: 0%; */
+    /* right: 0%; */
+    border-radius: 50%;
     /* background-color: rgba(237, 13, 13, 0.782); */
-    background-color: #DBE2EF;
-    /* border-color: #222831;
-    border-width: 10; */
-    border-radius: 100%;
-    transform-origin: 100% 50%;
-    translate: translateX(-50%) translateY(-100%);
-    animation: circle 3s;
-    transition: all .4s ease;
+    /* background-color: #DBE2EF; */
+    animation: circle 2s;
+    transition: all .4s linear;
 }
 
 .wrapper2 {
