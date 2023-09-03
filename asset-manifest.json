@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.5fccf2ae.css",
-    "main.js": "/portfolio/static/js/main.ca63ecff.js",
+    "main.css": "/portfolio/static/css/main.acdb75ae.css",
+    "main.js": "/portfolio/static/js/main.2584b254.js",
     "static/js/787.a2cb61a6.chunk.js": "/portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/iphone-11-mockup.png": "/portfolio/static/media/iphone-11-mockup.94e4a14038f22917833a.png",
     "static/media/dineIn.jpeg": "/portfolio/static/media/dineIn.29839cf83a0462d6dd8e.jpeg",
     "index.html": "/portfolio/index.html",
     "static/media/caret-right-solid.svg": "/portfolio/static/media/caret-right-solid.2f02700dc5915dcd8770e973f0662e31.svg",
-    "main.5fccf2ae.css.map": "/portfolio/static/css/main.5fccf2ae.css.map",
-    "main.ca63ecff.js.map": "/portfolio/static/js/main.ca63ecff.js.map",
+    "main.acdb75ae.css.map": "/portfolio/static/css/main.acdb75ae.css.map",
+    "main.2584b254.js.map": "/portfolio/static/js/main.2584b254.js.map",
     "787.a2cb61a6.chunk.js.map": "/portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5fccf2ae.css",
-    "static/js/main.ca63ecff.js"
+    "static/css/main.acdb75ae.css",
+    "static/js/main.2584b254.js"
   ]
 }
